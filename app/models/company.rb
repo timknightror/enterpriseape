@@ -4,5 +4,6 @@ class Company < ActiveRecord::Base
   CSV.foreach(file.path, headers: true) do |row|
     Company.create! row.to_hash
   end
+  end
 end
 
