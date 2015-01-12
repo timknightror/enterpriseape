@@ -38,8 +38,11 @@
 
 <H3>Import Companies</H3>
 <%= form_tag import_companies_path, multipart: true do %>
-<% file_field_tag :file %>
-<%= submit_tag "Upload Companies" %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload Companies", class: 'btn btn-default' %>
 <% end %>
 
+
+<h3>Download</h3>
+<%= link_to "Report", companies_path(format: "csv"), class: 'btn btn-default' %>
 <%= link_to 'New Company', new_company_path %>
